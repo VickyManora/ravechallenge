@@ -52,6 +52,7 @@ h5 {
 
 section {
   padding: 40px 0 52px;
+  visibility:visible;
 }
 
 .text-primary {
@@ -232,7 +233,23 @@ section {
   margin: 0;
   line-height: 26px;
 }
-
+.row2{
+  display:flex;
+ }
+ .row2{
+  display:flex;
+ }
+ 
+ .btn:focus, .btn:hover {
+   text-decoration: none;
+   background:#F6BC25 ;
+ }
+ .btn:active {
+   background-color: #F6BC25 !important;
+ }
+ .go_btn:hover{
+   background-color: #F2DA56 !important;
+ }
 @media (max-width: 991px) {
   .features .headline {
     margin-bottom: 28px;
@@ -269,6 +286,17 @@ section {
     flex: 0 0 50.4px;
     font-size: 26.88px;
     margin-right: 10.6px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .row2 :nth-child(1) { order: 1; }
+  .row2 :nth-child(2) { order: 4; }
+  .row2 :nth-child(3) { order: 2; }
+  .row2 :nth-child(4) { order: 5; }
+  .row2 :nth-child(5) { order: 3; }
+  .row2 :nth-child(6) { order: 6; }
+  .input-group.error .error-msg{
+     position: static;
   }
 }
 
@@ -337,7 +365,46 @@ section {
     display: none;
   }
 }
+/* ************************************************************
+***************************************************************
+--- Loader ---
+***************************************************************
+************************************************************ */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 10px solid #F6BC25 ;
+  border-radius: 50%;
+  border-top: 10px solid transparent;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
 
+ #loader~p{
+  font-family: Lato-Bold;
+font-size: 24px;
+color: #004A80;
+letter-spacing: 0;
+text-align: center;
+font-weight: 700;
+background-color: transparent;
+left:50%;
+top:60%
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 /* ************************************************************
 ***************************************************************
 --- [SECTION][RESULTS PAGE] Search Again ---

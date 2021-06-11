@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+  document.getElementById("loader-container").style.display = "none";
   $("#btn-search").on("click", function (e) {
     e.preventDefault();
     localStorage.clear(); //Clears storage for next request
@@ -14,12 +14,15 @@ $(document).ready(function () {
     }
 
     if (x === true) {
+      document.getElementById("loader-container").style.display = "block";
       document.querySelector('input[type="text"]').parentNode.classList.remove("error");
       const proxyurl = "";
       const url =
         'https://ltv-data-api.herokuapp.com/api/v1/records.json?email=' + email;
       fetch(proxyurl + url)
-        .then((response) => response.text())
+        .then((response) =>{
+        document.getElementById("loader-container").style.display = "none";
+          return response.text()})
         .then(function (contents) {
           localStorage.setItem("userObject", contents);
           window.location.href = "result.html";
