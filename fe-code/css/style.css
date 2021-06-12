@@ -463,7 +463,7 @@ section {
   z-index: 1;
   width: 120px;
   height: 120px;
-  margin: -76px 0 0 -76px;
+  margin: -150px 0 0 -76px;
   border: 10px solid #F6BC25 ;
   border-radius: 50%;
   border-top: 10px solid transparent;
@@ -472,15 +472,13 @@ section {
 }
 
  #loader~p{
-  font-family: Lato-Bold;
 font-size: 24px;
 color: #004A80;
 letter-spacing: 0;
 text-align: center;
 font-weight: 700;
 background-color: transparent;
-left:50%;
-top:60%
+margin: -150px 0 90px 10px;
 }
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
@@ -508,6 +506,14 @@ top:60%
   from{ bottom:-100px; opacity:0 } 
   to{ bottom:0; opacity:1 }
 }
+.sectionhide{
+  visibility: hidden;
+  /* display: none; */
+}
+.sectiondisplaynone{
+  display: none;
+  /* visibility: hidden; */
+ } 
 /* ************************************************************
 ***************************************************************
 --- [SECTION][RESULTS PAGE] Search Again ---
